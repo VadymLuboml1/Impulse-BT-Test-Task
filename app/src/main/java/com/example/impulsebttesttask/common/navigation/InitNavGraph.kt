@@ -1,27 +1,34 @@
 package com.example.impulsebttesttask.common.navigation
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.*
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import com.example.impulsebttesttask.quiz.QuizScreen
 import com.example.impulsebttesttask.splash.SplashScreen
+import com.google.accompanist.navigation.animation.composable
 import com.example.impulsebttesttask.start.StartScreen
+import com.google.accompanist.navigation.animation.AnimatedNavHost
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun InitNavGraph(navController: NavHostController) =
-    NavHost(
+    AnimatedNavHost(
         navController = navController,
         startDestination = Screen.Splash.routeId
     ) {
         declareNavRoutes()
     }
 
+@OptIn(ExperimentalAnimationApi::class)
 private fun NavGraphBuilder.declareNavRoutes() {
-    composable(route = Screen.Splash.routeId) {
+    composable(
+        route = Screen.Splash.routeId,
+    ) {
         SplashScreen()
     }
-    composable(route = Screen.Start.routeId) {
+    composable(
+        route = Screen.Start.routeId,
+    ) {
         StartScreen()
     }
     composable(
