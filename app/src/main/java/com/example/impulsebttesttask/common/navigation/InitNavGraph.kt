@@ -32,10 +32,20 @@ private fun NavGraphBuilder.declareNavRoutes() {
         StartScreen()
     }
     composable(
-        route = Screen.Quiz.routeId.decorateWithArgument(Screen.Quiz.LEVEL_ARG),
-        arguments = listOf(navArgument(name = Screen.Quiz.LEVEL_ARG) { type = NavType.IntType })
+        route = Screen.Quiz.routeId.decorateWithArgument(
+            Screen.Quiz.LEVEL_ARG,
+            Screen.Quiz.LEVEL_DEFAULT_ARG_VALUE
+        ),
+        arguments = listOf(
+            navArgument(name = Screen.Quiz.LEVEL_ARG) {
+                type = NavType.IntType
+                defaultValue = Screen.Quiz.LEVEL_DEFAULT_ARG_VALUE
+            }
+        )
     ) {
+
         val level = requireNotNull(it.arguments?.getInt(Screen.Quiz.LEVEL_ARG))
+
         QuizScreen(level = level)
     }
 }

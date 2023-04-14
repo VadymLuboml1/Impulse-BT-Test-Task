@@ -1,19 +1,22 @@
 package com.example.impulsebttesttask.common.navigation
 
-fun String.decorateWithArgument(arg: String): String =
+fun String.decorateWithArgument(argName: String, argValue: Any): String =
     buildString {
         append(
             this@decorateWithArgument,
-            ROUTE_WITH_ARG_DIVIDER,
-            ARGUMENT_FRAME_START_SYMBOML,
-            arg,
-            ARGUMENT_FRAME_END_SYMBOML
+            ARG_NAME_PREFIX,
+            argName,
+            ARG_NAME_SUFFIX,
+            ARGUMENT_VALUE_START_SYMBOML,
+            argValue,
+            ARGUMENT_VALUE_END_SYMBOML
         )
     }
 
-fun Screen.decorateWithArgument(arg: String) =
-    routeId.decorateWithArgument(arg)
+fun Screen.decorateWithArgument(argName: String, argValue: Any) =
+    routeId.decorateWithArgument(argName, argValue)
 
-private const val ROUTE_WITH_ARG_DIVIDER = "/"
-private const val ARGUMENT_FRAME_START_SYMBOML = "{"
-private const val ARGUMENT_FRAME_END_SYMBOML = "}"
+private const val ARG_NAME_PREFIX = "?"
+private const val ARG_NAME_SUFFIX = "="
+private const val ARGUMENT_VALUE_START_SYMBOML = "{"
+private const val ARGUMENT_VALUE_END_SYMBOML = "}"

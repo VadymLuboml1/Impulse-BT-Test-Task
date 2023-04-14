@@ -4,17 +4,17 @@ sealed class Screen(val routeId: String) {
     object Splash : Screen(ScreenRouteIs.SPLASH)
     object Start : Screen(ScreenRouteIs.START)
 
-    data class Quiz(val level: Int) : Screen(routeId) {
-        companion object : ScreenRouteIdOwner {
-            override val routeId: String = ScreenRouteIs.Quiz
+    object Quiz : Screen(ScreenRouteIs.QUIZ) {
+        const val LEVEL_ARG: String = "level"
+        const val LEVEL_DEFAULT_ARG_VALUE: Int = 0
 
-            const val LEVEL_ARG: String = "level"
-        }
+        fun decorateRouteWithParam(level: Int = LEVEL_DEFAULT_ARG_VALUE): String =
+            decorateWithArgument(argName = LEVEL_ARG, argValue = level)
     }
 }
 
 private object ScreenRouteIs {
     const val SPLASH = "splash_screen_id"
     const val START = "start_screen_id"
-    const val Quiz = "quiz_screen_id"
+    const val QUIZ = "quiz_screen_id"
 }
