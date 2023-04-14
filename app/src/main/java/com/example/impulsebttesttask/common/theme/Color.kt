@@ -1,4 +1,4 @@
-package com.example.impulsebttesttask.ui.theme
+package com.example.impulsebttesttask.common.theme
 
 import androidx.compose.ui.graphics.Color
 
