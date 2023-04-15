@@ -24,7 +24,9 @@ fun <T> quizMatrixOf(
 
     return buildList {
         for (i in 0..matrixSize.rowsSize) {
-            buildRowElements(i)
+            add(
+                buildRowElements(i)
+            )
         }
     }
 
