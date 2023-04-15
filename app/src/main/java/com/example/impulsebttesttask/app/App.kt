@@ -1,4 +1,4 @@
-package com.example.impulsebttesttask
+package com.example.impulsebttesttask.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
