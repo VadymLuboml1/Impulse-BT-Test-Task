@@ -3,7 +3,7 @@ package com.example.impulsebttesttask.common.navigation
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.*
-import com.example.impulsebttesttask.quiz.QuizScreen
+import com.example.impulsebttesttask.quiz.ui.QuizScreen
 import com.example.impulsebttesttask.splash.SplashScreen
 import com.google.accompanist.navigation.animation.composable
 import com.example.impulsebttesttask.start.StartScreen

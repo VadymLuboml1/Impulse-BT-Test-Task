@@ -1,4 +1,4 @@
-package com.example.impulsebttesttask.quiz
+package com.example.impulsebttesttask.quiz.ui
 
 import androidx.compose.runtime.Composable
 
