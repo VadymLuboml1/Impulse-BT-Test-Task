@@ -1,12 +1,14 @@
 package com.example.impulsebttesttask.common.navigation
 
+import com.example.impulsebttesttask.quiz.domain.usecase.GetNextLevelUseCase
+
 sealed class Screen(val routeId: String) {
     object Splash : Screen(ScreenRouteIs.SPLASH)
     object Start : Screen(ScreenRouteIs.START)
 
     object Quiz : Screen(ScreenRouteIs.QUIZ) {
         const val LEVEL_ARG: String = "level"
-        const val LEVEL_DEFAULT_ARG_VALUE: Int = 0
+        const val LEVEL_DEFAULT_ARG_VALUE: Int = GetNextLevelUseCase.START_LEVEL
 
         fun decorateRouteWithParam(level: Int = LEVEL_DEFAULT_ARG_VALUE): String =
             decorateWithArgument(argName = LEVEL_ARG, argValue = level)
