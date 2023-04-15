@@ -7,13 +7,13 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
-import com.example.impulsebttesttask.common.navigation.navigate
+import com.example.impulsebttesttask.common.navigation.route.navigate
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.example.impulsebttesttask.R
-import com.example.impulsebttesttask.common.compose.LocalNavigationProvider
 import com.example.impulsebttesttask.common.compose.background.MainBackgroundContainer
-import com.example.impulsebttesttask.common.navigation.Screen
+import com.example.impulsebttesttask.common.navigation.LocalNavigationProvider
+import com.example.impulsebttesttask.common.navigation.route.Screen
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flowOf
 

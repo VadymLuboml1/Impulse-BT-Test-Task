@@ -1,4 +1,4 @@
-package com.example.impulsebttesttask.common.compose
+package com.example.impulsebttesttask.common.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider

@@ -1,4 +1,4 @@
-package com.example.impulsebttesttask.common.navigation
+package com.example.impulsebttesttask.common.navigation.route
 
 fun String.decorateWithArgument(argName: String, argValue: Any): String =
     buildString {

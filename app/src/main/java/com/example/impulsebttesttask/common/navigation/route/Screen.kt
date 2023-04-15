@@ -1,4 +1,4 @@
-package com.example.impulsebttesttask.common.navigation
+package com.example.impulsebttesttask.common.navigation.route
 
 import com.example.impulsebttesttask.quiz.domain.usecase.GetNextLevelUseCase
 
